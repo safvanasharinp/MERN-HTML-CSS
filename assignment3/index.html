@@ -1,57 +1,117 @@
+<!DOCTYPE html>
 <html>
-    <head>
 <style>
-    *
-        {   margin:0;
-            padding:0;
-            box-sizing:border-box}
-    
-    .container{
-       
-        
-        text-align: center;
-        margin:auto;
-        width:100%;
-       
-    }
-    .outer{
-        display:flex;
-        flex-wrap: wrap;
-        margin:auto;
-        padding:30px;
-        border-radius: 10px;
-        background-color: teal;
-        width:300px;
-        height: 300px;
-    }
-    
-    input[type=text],input[type=password]{
-        width:100%;
-        border-radius: 20px;
-        display: flex;
-    }
-    form{
-        background-color: white;
-    }
+/* body {font-family: Arial, Helvetica, sans-serif;} */
+* {box-sizing: border-box;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: rgb(13, 13, 230);
+  color: white;
+  padding: 15px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+h1,p{
+    text-align: center;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: center;
+  width: 100%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  width:500px;
+  
+  margin: auto;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+/* @media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+} */
 </style>
-    </head>
-    <body style="background:linear-gradient(red,blue);display:flex;">
-        <!-- <div class=outer style="display:flex;width:50%;margin:auto;text-align: center;border-radius: 10px;"> -->
-        <form class="container" style="width:400px;height:400px;border-radius: 20px;">
-            <!-- <div class=container> -->
-           <p style="font-size: 30px"><b>Create account</b></p>
-           <b>already have an account?<a href="">Sign in</a></b>
-           <br><br>
-           <input type="text"><br>
-           <input type="text"><br>
-           <input type="text"><br>
-            <input type="email"><br>
-            <input type="submit"><br>
-            <input type="checkbox">I have readand agree to the <a href="">Terms of Services</a>
-              
-        <!-- </div>            -->
-            </form>
-        <!-- </div> -->
-        
-    </body>
+<body style="background:linear-gradient(pink,orange);">
+
+<form  style="border:1px solid #ccc;">
+  <div class="container">
+    <h1>Create account</h1>
+    <p>Already have an account?<a href="">Sign in</a></p>
+    
+
+    <!-- <label for="email"><b>Email</b></label> -->
+    <input type="text"   required>
+
+    <!-- <label for="psw"><b>Password</b></label> -->
+    <input type="text" placeholder="first name"  required style="width:50%;float: left;">
+
+    <!-- <label for="psw-repeat"><b>Repeat Password</b></label> -->
+    <input type="text" placeholder="Last name" required   style="width:50%;float: left;">
+    <input type="email"  placeholder="E-mail" required>
+    
+    
+        <div class="clearfix">
+      <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+     <p> <button type="submit" class="signupbtn"><p>Sign Up <span style="float: right;"> &rArr; </span></p></button></p>
+
+    </div>
+    <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> I have read and agree to the <a href="">terms of Services</a>
+      </label>
+  </div>
+</form>
+
+</body>
 </html>
