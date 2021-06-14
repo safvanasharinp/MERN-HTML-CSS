@@ -1,0 +1,16 @@
+#showcase{
+    min-height: 300px;
+}
+#showcase h1{
+    font-size: 40px;
+    font-weight: 100 !important;
+}
+.p4>.img{
+    background-image: url(product1.jpg);
+}
+.p5>.img{
+    background-image: url(product2-2.jpg);
+}
+.p6>.img{
+    background-image: url(product3.jpg);
+}
